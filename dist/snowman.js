@@ -37,6 +37,7 @@ function drawSnowText(canvas) {
    context.textAlign = "center";
    context.textBaseline = "top";
    context.fillStyle = "blue";
+
    context.fillText("SNOW", canvas.width / 2, 10);
 
 }
@@ -46,20 +47,20 @@ function drawSnowman(canvas) {
 
    context.fillStyle = "white";
 
+   //Bottom
    context.beginPath();
    context.arc(150, 200, 50 ,0, Math.PI * 2);
    context.fill();
-   context.closePath();
 
+   //Middle
    context.beginPath();
    context.arc(150, 120, 40 ,0, Math.PI * 2);
    context.fill();
-   context.closePath();
 
+   //Top
    context.beginPath();
    context.arc(150, 60, 25 ,0, Math.PI * 2);
    context.fill();
-   context.closePath();
 
 }
 
@@ -73,7 +74,6 @@ function drawSingleFlake(canvas, x, y) {
    context.lineTo(x + flakeSize / 2, y + flakeSize / 2);
    context.lineTo(x, y + flakeSize);
    context.lineTo(x - flakeSize / 2, y + flakeSize / 2);
-   context.closePath();
    context.fill();
 
 }
